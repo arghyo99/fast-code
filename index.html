@@ -3,14 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Survice</title>
+    <title>Fast Service</title>
+    <!-- Google Fonts থেকে সুন্দর একটি ফন্ট আনা হয়েছে -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* পুরো পেজের বেসিক সেটআপ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a; /* প্রিমিয়াম ডার্ক ব্যাকগ্রাউন্ড */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* আকর্ষণীয় নেভিগেশন বার */
+        nav {
+            background: rgba(30, 41, 59, 0.7); /* গ্লাস-মরফিজম ইফেক্ট */
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* মেনুর লিংকগুলোর স্টাইল */
+        nav a {
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        /* Sad Song বাটনের জন্য আকর্ষণীয় রেড বাটন */
+        .btn-sad {
+            color: #ff4d4d;
+            border: 2px solid #ff4d4d;
+        }
+
+        .btn-sad:hover {
+            background: #ff4d4d;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* Work Video বাটনের জন্য নিয়ন ব্লু বাটন */
+        .btn-work {
+            color: #00d2ff;
+            border: 2px solid #00d2ff;
+        }
+
+        .btn-work:hover {
+            background: #00d2ff;
+            color: #0f172a;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* হোমপেজের মেইন কন্টেন্ট এরিয়া (দেখতে সুন্দর লাগার জন্য) */
+        .hero-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #00d2ff, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-section p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* মোবাইল ফ্রেন্ডলি করার জন্য রেসপন্সিভ কোড */
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 20px;
+                gap: 15px;
+            }
+            nav a {
+                font-size: 0.95rem;
+                padding: 8px 18px;
+            }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- নেভিগেশন বার -->
     <nav>
-    <a style="color: red;" href="sadsong.html">Sad Song</a>    
-    <a href="workvideo.html">Work Video</a>
+        <a class="btn-sad" href="sadsong.html">Sad Song</a>    
+        <a class="btn-work" href="workvideo.html">Work Video</a>
     </nav>
 
+    <!-- বডি কন্টেন্ট (পেজটি খালি যেন না দেখায়) -->
+    <div class="hero-section">
+        <h1>Welcome to Fast Service</h1>
+        <p>Explore our emotional playlist or check out our professional work videos instantly.</p>
+    </div>
 
 </body>
 </html>

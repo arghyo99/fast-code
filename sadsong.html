@@ -3,16 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sad Song</title>
+    <!-- প্রিমিয়াম ফন্টের জন্য Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* পুরো পেজের বেসিক সেটআপ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a; /* আগের পেজগুলোর সাথে মিল রেখে ডার্ক থিম */
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* স্যাড থিম কন্টেইনার */
+        section {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.4); /* গ্লাস ইফেক্ট */
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 77, 77, 0.1); /* হালকা লালচে বর্ডার */
+            margin-bottom: 25px;
+        }
+
+        /* মেইন ফানি/স্যাড হেডিং */
+        h1 {
+            font-size: 2.4rem;
+            color: #00ff40; /* আপনার দেওয়া সবুজ রঙ */
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-shadow: 0 0 15px rgba(0, 255, 64, 0.3);
+        }
+
+        /* সাব-হেডিং */
+        h2 {
+            font-size: 1.3rem;
+            color: #ff4800; /* আপনার দেওয়া অরেঞ্জ রঙ */
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(255, 72, 0, 0.3);
+        }
+
+        /* ভিডিও প্লেয়ার ডিজাইন */
+        video {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 77, 77, 0.2); /* হালকা লাল গ্লো */
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            outline: none;
+            background-color: #000;
+        }
+
+        /* ব্যাক বাটনটিকে আকর্ষণীয় লাল থিম দেওয়া হয়েছে */
+        .btn-back {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ff4d4d, #cc0000); /* রেড গ্রেডিয়েন্ট */
+            padding: 12px 45px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+        }
+
+        /* বাটনের হোভার ইফেক্ট */
+        .btn-back:hover {
+            background: #ffffff;
+            color: #ff4d4d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 77, 77, 0.6);
+        }
+
+        /* মোবাইল স্ক্রিনের জন্য রেসপন্সিভ */
+        @media (max-width: 500px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.1rem; }
+            section { padding: 20px 15px; }
+            .btn-back { padding: 10px 35px; }
+        }
+    </style>
 </head>
 <body>
-        <section>
-    <h1 style="display:flex; flex-direction: column; color: rgb(0, 255, 64); text-align: center;">Bby Shaka Khaiso  🤣🤣 </h1>
-    <h2 style="display:flex; flex-direction: column; text-align: center;font-weight: bold; color: rgb(255, 72, 0);">Necha Song ta sono valo lagba 👇</h2>
-    <video style="display:flex; flex-direction: column; margin:20px auto ;" height="400px" autofocus="Song" controls src="video/video1.mp4"></video>
+
+    <section>
+        <h1>Bby Shaka Khaiso 🤣🤣</h1>
+        <h2>Necha Song ta sono valo lagba 👇</h2>
+        <video controls src="video/video1.mp4"></video>
     </section>
 
-<a style="height: 20px; width: 30px; background-color: aqua; text-decoration: none; padding: 10px 45px; display:flex; flex-direction: column; margin:20px auto ; " href="index.html" >Back</a>
+    <!-- স্টাইলিশ ব্যাক বাটন -->
+    <a class="btn-back" href="index.html">Back</a>
     
 </body>
 </html>
